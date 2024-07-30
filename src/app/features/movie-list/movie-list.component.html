@@ -1,0 +1,20 @@
+<p>MOVIE FILTERS</p>
+<div class="filter-container">
+    <input type="text" placeholder="Filter by title" [(ngModel)]="filterTitle" />
+    <input type="text" placeholder="Filter by release year" [(ngModel)]="filterYear" />
+</div>
+
+<p>MOVIE LIST</p>
+<ng-container class="movie-list">
+    <span *ngFor="let movie of filteredMovies()" class="movie-card">
+        <div style="display:flex; flex-direction: column;">
+            <h2 style="color:black">{{movie.title}}</h2>
+            <div class="movie-information">
+                <span>Release date: {{movie.release_date}}</span>
+                <span>Budget: ${{movie.budget}} milion</span>
+                <span>Duration: {{movie.duration | duration}}</span>
+            </div>
+        </div>
+        <button class="details-button" [attr.id]="movie.id" (click)="viewDetails(movie.id)">Details</button>
+    </span>
+</ng-container>

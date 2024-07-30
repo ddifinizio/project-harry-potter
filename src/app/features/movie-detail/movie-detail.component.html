@@ -1,0 +1,31 @@
+<div class="container">
+    <button class="details-button" (click)="goBack()">Back</button>
+    <h1>{{movieSelected.title}}</h1>
+    <div class="movie-info">
+        <img [src]="movieSelected.poster" [alt]="movieSelected.title" class="movie-image"/>
+        <p class="movie-summary">{{movieSelected.summary}}</p>
+    </div>
+    <table class="movie-table">
+        <tr>
+            <th class="movie-table-header">Box Office</th>
+            <td>{{ movieSelected.box_office | boxOffice}}</td>
+        </tr>
+        <tr>
+            <th class="movie-table-header">Budget</th>
+            <td>${{ movieSelected.budget }} million</td>
+        </tr>
+        <tr>
+            <th class="movie-table-header">Duration</th>
+            <td>{{ movieSelected.duration | duration}}</td>
+        </tr>
+        <tr>
+            <th class="movie-table-header">Producers</th>
+            <td>{{ movieSelected.producers }}</td>
+        </tr>
+        <tr>
+            <th class="movie-table-header">Cinematographers</th>
+            <td>{{ movieSelected.cinematographers }}</td>
+        </tr>
+    </table>
+
+</div>
