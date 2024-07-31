@@ -1,0 +1,43 @@
+.movie-list{
+    display:flex;
+    flex-direction: column;
+}
+
+.movie-card{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: darkgrey;
+    border-radius: 5px;
+}
+
+.movie-information{
+    display:flex;
+    margin-left: 10px;
+    gap: 20px;
+    color: black;
+    flex: 1;
+}
+
+.details-button {
+    margin-left: auto;
+    padding: 8px 16px; 
+    border-radius: 4px; 
+    background-color: lightslategrey;
+    color: white; 
+    cursor: pointer;
+    font-size: 14px; 
+  }
+
+  .filter-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0.5rem;     
+    background-color: darkgrey;; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
